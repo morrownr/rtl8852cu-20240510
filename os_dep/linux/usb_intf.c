@@ -170,6 +170,7 @@ static struct usb_device_id rtw_usb_id_tbl[] = {
 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_REALTEK, 0xC832, 0xff, 0xff, 0xff), .driver_info = RTL8852C},
 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_REALTEK, 0xC85A, 0xff, 0xff, 0xff), .driver_info = RTL8852C},
 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_REALTEK, 0xC85D, 0xff, 0xff, 0xff), .driver_info = RTL8852C},
+	{USB_DEVICE_AND_INTERFACE_INFO(0x35bc, 0x0102, 0xff, 0xff, 0xff), .driver_info = RTL8852C}, /* TP-Link TXE70UH */
 #endif /* CONFIG_RTL8852C */
 
 	{}	/* Terminating entry */
