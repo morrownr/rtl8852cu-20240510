@@ -101,6 +101,8 @@ which can be provided via PR or message in Issues.
 - [Raspberry Pi Desktop](https://www.raspberrypi.org) (2022-07-01) (x86 32 bit) (kernel 5.10)
 
 - [Ubuntu](https://www.ubuntu.com) 24.04 (kernel 6.8) and 24.10 (kernel 6.11)
+  
+- [Zorin](https://zorin.com/) 17.3 (kernel 6.8)
 
 Note: Red Hat Enterprise Linux (RHEL) and distros based on RHEL are
 supported by Red Hat devs due to the way kernel patches are handled in
@@ -137,7 +139,7 @@ problematic.
 * TP-Link Archer TX50UH V1
 * TP-Link Archer TXE70UH(EU) V1
 * MSI AXE5400
-
+* Wavlink WL-WN695X2-A
 * Additional adapters that are based on the supported chipsets.
 
 Note: If you are looking for information about what adapter to buy,
