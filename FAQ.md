@@ -171,12 +171,12 @@ It provides secure boot instructions.
 
 Question: Is WPA3 supported?
 
-Answer: WPA3-SAE is supported. It works well on most modern Linux
-distros but not all. Generally the reason for WPA3 not working on Linux
-distros is that the distro has an old version of wpa_supplicant or
-Network Manager. Your options are to upgrade to a more modern distro
-such as those released after mid-2022 or compile and install new
-versions of wpa_supplicant and/or Network Manager.
+Answer: WPA3-SAE is supported. It works well on most modern Linux distros
+but not all. Generally the reason for WPA3 not working on Linux distros is
+that the distro has an old version of wpa_supplicant or Network Manager.
+Your options are to upgrade to a more modern distro such as those released
+after mid-2022 or compile and install new versions of wpa_supplicant and/or
+Network Manager.
 
 -----
 
@@ -188,9 +188,9 @@ same chipset in the same computer. You can have multiple Realtek based
 adapters in the same computer as long as the adapters are based on
 different chipsets.
 
-Recommendation: If this is an important capability for you, I have
-tested Mediatek adapters for this capability and it does work with
-adapters that use the following chipsets: mt7921au, mt7612u and mt7610u.
+Recommendation: If this is an important capability for you, I have tested
+Mediatek adapters for this capability and it does work with adapters that
+use the following chipsets: mt7921au, mt7612u and mt7610u.
 
 -----
 

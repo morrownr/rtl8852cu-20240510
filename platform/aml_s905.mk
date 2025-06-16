@@ -1,11 +1,11 @@
 ifeq ($(CONFIG_PLATFORM_AML_S905), y)
-EXTRA_CFLAGS += -DCONFIG_PLATFORM_AML_S905
-EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
-EXTRA_CFLAGS += -DCONFIG_IOCTL_CFG80211 -DRTW_USE_CFG80211_STA_EVENT
-EXTRA_CFLAGS += -DCONFIG_RADIO_WORK
-EXTRA_CFLAGS += -DCONFIG_CONCURRENT_MODE
+ccflags-y += -DCONFIG_PLATFORM_AML_S905
+ccflags-y += -DCONFIG_LITTLE_ENDIAN
+ccflags-y += -DCONFIG_IOCTL_CFG80211 -DRTW_USE_CFG80211_STA_EVENT
+ccflags-y += -DCONFIG_RADIO_WORK
+ccflags-y += -DCONFIG_CONCURRENT_MODE
 ifeq ($(shell test $(CONFIG_RTW_ANDROID) -ge 11; echo $$?), 0)
-EXTRA_CFLAGS += -DCONFIG_IFACE_NUMBER=3
+ccflags-y += -DCONFIG_IFACE_NUMBER=3
 endif
 
 # default setting for Android
@@ -20,26 +20,26 @@ KSRC := $(KERNEL_SRC)
 endif
 
 #Add by amlogic
-EXTRA_CFLAGS += -w -Wno-return-type
-EXTRA_CFLAGS += $(foreach d,$(shell test -d $(KERNEL_SRC)/$(M) && find $(shell cd $(KERNEL_SRC)/$(M);pwd) -type d),$(shell echo " -I$(d)"))
+ccflags-y += -w -Wno-return-type
+ccflags-y += $(foreach d,$(shell test -d $(KERNEL_SRC)/$(M) && find $(shell cd $(KERNEL_SRC)/$(M);pwd) -type d),$(shell echo " -I$(d)"))
 ifeq ($(CONFIG_PCI_HCI), y)
-EXTRA_CFLAGS += -DUSE_AML_PCIE_TEE_MEM
+ccflags-y += -DUSE_AML_PCIE_TEE_MEM
 endif
 
 ifeq ($(CONFIG_PCI_HCI), y)
-EXTRA_CFLAGS += -DCONFIG_PLATFORM_OPS
+ccflags-y += -DCONFIG_PLATFORM_OPS
 _PLATFORM_FILES := platform/platform_linux_pc_pci.o
 OBJS += $(_PLATFORM_FILES)
 # Core Config
 # CONFIG_RTKM - n/m/y for not support / standalone / built-in
 CONFIG_RTKM = m
 CONFIG_MSG_NUM = 128
-EXTRA_CFLAGS += -DCONFIG_MSG_NUM=$(CONFIG_MSG_NUM)
-EXTRA_CFLAGS += -DCONFIG_RXBUF_NUM_1024
-EXTRA_CFLAGS += -DCONFIG_TX_SKB_ORPHAN
-EXTRA_CFLAGS += -DCONFIG_DIS_DYN_RXBUF
+ccflags-y += -DCONFIG_MSG_NUM=$(CONFIG_MSG_NUM)
+ccflags-y += -DCONFIG_RXBUF_NUM_1024
+ccflags-y += -DCONFIG_TX_SKB_ORPHAN
+ccflags-y += -DCONFIG_DIS_DYN_RXBUF
 # PHL Config
-EXTRA_CFLAGS += -DRTW_WKARD_98D_RXTAG
+ccflags-y += -DRTW_WKARD_98D_RXTAG
 endif
 
 ifeq ($(CONFIG_RTL8852B), y)

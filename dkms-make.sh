@@ -20,4 +20,4 @@ if [ "$sproc" -gt 1 ]; then
 fi
 
 kernelver=${kernelver:-$(uname -r)}
-make "-j$sproc" "KVER=$kernelver" "KSRC=/lib/modules/$kernelver/build"
+make "-j$sproc" "KVER=$kernelver" "KSRC=/lib/modules/$kernelver/build" "KBUILD_MODPOST_WARN=1"

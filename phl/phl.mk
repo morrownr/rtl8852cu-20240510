@@ -117,5 +117,5 @@ endif
 
 OBJS += $(_PHL_FILES)
 
-EXTRA_CFLAGS += -I$(phl_path_d1)
+ccflags-y += -I$(phl_path_d1)
 include $(phl_path_d1)/hal.mk
