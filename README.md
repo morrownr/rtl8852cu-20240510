@@ -85,7 +85,7 @@ which can be provided via PR or message in Issues.
 
 - [Arch Linux](https://www.archlinux.org) (kernels 5.4 and 5.11)
 
-- [Debian](https://www.debian.org/) (kernels 5.10, 5.15 and 6.1)
+- [Debian](https://www.debian.org/) (kernels 5.10, 5.15, 6.1 and 6.12)
 
 - [Fedora](https://getfedora.org) Fedora 38 (6.2.13-300)
 
