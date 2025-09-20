@@ -83,7 +83,7 @@ Note: Kernels earlier than 5.10 may work but have not been tested.
 Note: The information in this section depends largely on user reports
 which can be provided via PR or message in Issues.
 
-- [Arch Linux](https://www.archlinux.org) (kernels 5.4 and 5.11)
+- [Arch Linux](https://www.archlinux.org) (kernels 5.4, 5.11 and 6.16)
 
 - [Debian](https://www.debian.org/) (kernels 5.10, 5.15, 6.1 and 6.12)
 
