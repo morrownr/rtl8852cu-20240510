@@ -684,14 +684,17 @@ struct rtw_timer_list {
 	void *arg;
 };
 
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 14, 0))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 16, 0))
 static inline void timer_hdl(struct timer_list *in_timer)
 {
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 16, 0))
-    _timer *ptimer = timer_container_of(ptimer, in_timer, timer);
-#else
-    _timer *ptimer = from_timer(ptimer, in_timer, timer);
-#endif
+	_timer *ptimer = timer_container_of(ptimer, in_timer, timer);
+
+	ptimer->function(ptimer->arg);
+}
+#elif (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 14, 0))
+static inline void timer_hdl(struct timer_list *in_timer)
+{
+	_timer *ptimer = from_timer(ptimer, in_timer, timer);
 
 	ptimer->function(ptimer->arg);
 }
