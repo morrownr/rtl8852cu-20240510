@@ -69,14 +69,14 @@ Note: Additional CPU architectures may work but have not been tested.
 
 ### Compatible Kernels
 
-- Kernels: 5.10 - 6.6 (Realtek)
-- Kernels: 6.7  - 6.17 (community support)
+- Kernels: 5.15 - 6.6  (Realtek)
+- Kernels: 6.7  - 6.18 (community support)
 
 Note: Kernels earlier than 5.10 may work but have not been tested.
 
 ### Tested Compilers
 
-- gcc 12, 13 and 14
+- gcc 13, 14 and 15
 
 ### Tested Linux Distributions
 
@@ -93,11 +93,11 @@ which can be provided via PR or message in Issues.
 
 - [openSUSE](https://www.opensuse.org/) Tumbleweed (rolling) (kernel 5.15)
 
-- [Raspberry Pi OS](https://www.raspberrypi.org) (2024-11-19)(kernel 6.6)
+- [Raspberry Pi OS](https://www.raspberrypi.org) (kernel 6.12)
 
 - [Raspberry Pi Desktop](https://www.raspberrypi.org) (2022-07-01) (x86 32 bit) (kernel 5.10)
 
-- [Ubuntu](https://www.ubuntu.com) 24.04 (kernel 6.8) and 24.10 (kernel 6.11)
+- [Ubuntu](https://www.ubuntu.com) kernel 6.8, kernel 6.11, 6.14 and 6.17
   
 - [Zorin](https://zorin.com/) 17.3 (kernel 6.8)
 
